@@ -1,0 +1,33 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 200px;
+  background-color: aliceblue;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.rank {
+  margin-right: 20px;
+}
+
+.star {
+  margin-right: 5px;
+}

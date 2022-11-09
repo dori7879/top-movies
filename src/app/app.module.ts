@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { TopMoviesComponent } from './pages/top-movies/top-movies.component';
 import {HttpClientModule} from "@angular/common/http";
 import { StoreModule } from '@ngrx/store';
-import { movieReducer } from './store/movie/movie.reducer';
+import { reducer } from './store/movie/movie.reducer';
 import { EffectsModule } from '@ngrx/effects'
 import {MovieEffects} from "./store/movie/movies.effects";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,9 @@ import {MovieEffects} from "./store/movie/movies.effects";
   imports: [
     BrowserModule,
     HttpClientModule,
-    StoreModule.forRoot({movie: movieReducer}),
-    EffectsModule.forFeature([MovieEffects]),
-    EffectsModule.forRoot()
+    StoreModule.forRoot({'movies': reducer}),
+    EffectsModule.forRoot([MovieEffects]),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

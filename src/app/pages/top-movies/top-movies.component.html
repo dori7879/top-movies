@@ -1,4 +1,19 @@
-<p>top-movies works!</p>
-<div *ngFor="let movie of movies$ | async">
-  {{ movie.toString() }}
+<div class="content">
+  <h1 class="title">Top 250 Movies</h1>
+  <div *ngFor="let movie of movies$ | async">
+      <div class="card">
+        <div class="rank">{{movie.rank}}</div>
+        <div class="image">
+          <img [src]="movie.image" />
+        </div>
+        <div class="details">
+          <h3>{{movie.fullTitle}}</h3>
+          <p><span class="star">&#11088;</span>{{movie.imDbRating}}</p>
+          <span>{{movie.crew}}</span>
+        </div>
+      </div>
+  </div>
 </div>
+
+
+

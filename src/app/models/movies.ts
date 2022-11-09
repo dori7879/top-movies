@@ -1,9 +1,16 @@
 export interface Movie {
-  editTime?: number;
-  eventEndTime: number;
-  eventStartTime: number;
-  eventType: string;
-  id?: number;
-  live: boolean;
-  message: string;
+  id: string;
+  rank: string;
+  title: string;
+  fullTitle: string;
+  year: string;
+  image: string;
+  crew: string;
+  imDbRating: string
+  imDbRatingCount: string
+}
+
+export interface MovieResponse {
+  items: Movie[],
+  errorMessage: string
 }

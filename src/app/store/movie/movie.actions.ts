@@ -5,7 +5,7 @@ export const loadMovies = createAction('[TopMovies Component] load movies');
 
 export const loadMoviesSuccess = createAction(
   '[TopMovies Component] load movies success',
-  props<{movies: Movie[]}>
+  props<{ movies: Movie[] }>()
 );
 
 export const loadMoviesFailure = createAction(
